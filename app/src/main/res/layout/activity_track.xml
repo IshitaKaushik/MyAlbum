@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/back11"
+    android:layout_height="match_parent"
+    tools:context=".TrackActivity">
+
+    <ImageView
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:id="@+id/album_im"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        tools:src="@drawable/ic_launcher_background"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/album_ti"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        tools:text="Album name"
+        android:textStyle="bold"
+        android:gravity="center_horizontal"
+        android:paddingTop="16dp"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
+        app:layout_constraintLeft_toRightOf="@id/album_im"
+        app:layout_constraintTop_toTopOf="@id/album_im"/>
+
+    <RatingBar
+        android:id="@+id/album_ra"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:numStars="5"
+        android:stepSize="1"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/album_ti"
+        style="?android:attr/ratingBarStyleSmall"
+        android:isIndicator="true"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginRight="25dp"
+        app:layout_constraintLeft_toRightOf="@id/album_ti" />
+
+
+
+    <View
+        android:id="@+id/lineH"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        app:layout_constraintTop_toBottomOf="@id/album_im"
+        app:layout_constraintBottom_toTopOf="@id/recycleTrack"
+        android:background="@android:color/black"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:id="@+id/recycleTrack"
+        android:layout_height="0dp"
+        tools:listitem="@layout/item_track"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/buttonTrack"
+        app:layout_constraintTop_toBottomOf="@id/album_im"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/buttonTrack"
+        android:src="@drawable/ic_baseline_add_24"
+        app:layout_constraintTop_toBottomOf="@id/recycleTrack"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:onClick="createTrack"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

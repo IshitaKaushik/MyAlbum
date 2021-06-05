@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MyAlbum</string>
+    <string name="album_name">álbum nombre</string>
+    <string name="enter_release_year">ingresar año de lanzamiento</string>
+    <string name="track_name">pista nombre</string>
+    <string name="singer_name">cantante nombre</string>
+</resources>

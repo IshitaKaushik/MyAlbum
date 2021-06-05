@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">MyAlbum</string>
+    <string name="album_name">Album Name</string>
+    <string name="enter_release_year">Enter Release Year</string>
+    <string name="track_name">Track Name</string>
+    <string name="singer_name">Singer Name</string>
+</resources>
